@@ -1,0 +1,108 @@
+openapi: 3.0.0
+info:
+  version: '0.0.1'
+  title: 'Food'
+  description: ''
+paths:
+  /restaurants:
+    get:
+      tags:
+        - restaurants
+      summary: Gets restaurants
+      operationId: getRestaurants
+      description: ''
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restaurants'
+  
+  /restaurants/{id}:
+    get:
+      tags:
+        - restaurants
+      summary: Gets a restaurant
+      operationId: getRestaurant
+      description: ''
+      parameters:
+        - in: path
+          required: true
+          name: id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restaurant'
+  
+  /restaurants/{id}/menu:
+    get:
+      tags:
+        - restaurants
+      summary: Gets a menu
+      operationId: getMenu
+      description: ''
+      parameters:
+        - in: path
+          required: true
+          name: id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Menu'
+components:
+  schemas:
+    Restaurants:
+      type: array
+      items:
+        $ref: '#/components/schemas/Restaurant'
+    Restaurant:
+      type: object
+      properties:
+        id:
+          type: string
+          format: int
+          example: 1
+        name:
+          type: string
+          example: 'Godfathers'
+        postCode:
+          type: string
+          example: 'MK11 1AB'
+        town:
+          type: string
+          example: 'Milton Keynes'
+        cuisine:
+          type: string
+          
+          example: 'Italian'
+    Menu:
+      type: array
+      items:
+        $ref: '#/components/schemas/MenuItem'
+    MenuItem:
+      type: object
+      properties:
+        id:
+          type: string
+          format: int
+          example: 1
+        name:
+          type: string
+          example: 'Pizza'
+        type:
+          type: string
+          example: 'main'
+        price:
+          type: number
+          example: 9.99
