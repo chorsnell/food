@@ -1,3 +1,4 @@
 import restaurantsRoutes from "./restaurants/restaurants.routes";
+import menusRoutes from "./menus/menus.routes";
 
-export default [...restaurantsRoutes];
+export default [...restaurantsRoutes, ...menusRoutes];
