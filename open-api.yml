@@ -106,6 +106,25 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Menu'
+    post:
+      tags:
+        - restaurants
+      summary: Inserts a menu item
+      operationId: insertMenu
+      description: ''
+      parameters:
+        - in: path
+          required: true
+          name: id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Menu'
 components:
   schemas:
     Restaurants:
