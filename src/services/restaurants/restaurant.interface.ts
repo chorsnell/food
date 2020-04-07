@@ -1,4 +1,5 @@
-import {Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, JoinTable, ManyToMany, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import { Menu } from "../menus/menus.interface";
 
 @Entity()
 export class Restaurant {
@@ -16,6 +17,9 @@ export class Restaurant {
 
 	@Column({ default: null })
 	cuisine: string;
+
+	@OneToMany(type => Menu, menu => menu.parent)
+	menu?: Menu[];
 }
 
 export interface Restaurants extends Array<Restaurant>{}
