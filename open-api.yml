@@ -18,6 +18,26 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Restaurants'
+    post:
+      tags:
+        - restaurants
+      summary: Inserts a restaurant
+      operationId: insertRestaurant
+      description: ''
+      requestBody:
+        description: ''
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Restaurant'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restaurant'
   
   /restaurants/{id}:
     get:
@@ -26,6 +46,32 @@ paths:
       summary: Gets a restaurant
       operationId: getRestaurant
       description: ''
+      parameters:
+        - in: path
+          required: true
+          name: id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restaurant'
+    put:
+      tags:
+        - restaurants
+      summary: Updates a restaurant
+      operationId: updateRestaurant
+      description: ''
+      requestBody:
+        description: ''
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Restaurant'
       parameters:
         - in: path
           required: true

@@ -1,15 +1,25 @@
-import { getRestaurants, insertRestaurant } from './restaurants.service';
+import { getRestaurants, getRestaurant, insertRestaurant, updateRestaurant } from './restaurants.service';
 
 // routes
 export default [
   {
-    path: "/",
+    path: "/restaurants",
     method: "get",
     handler: getRestaurants
   },
   {
-    path: "/add",
+    path: "/restaurants/:id",
     method: "get",
+    handler: getRestaurant
+  },
+  {
+    path: "/restaurants",
+    method: "post",
     handler: insertRestaurant
+  },
+  {
+    path: "/restaurants/:id",
+    method: "put",
+    handler: updateRestaurant
   }
 ];
