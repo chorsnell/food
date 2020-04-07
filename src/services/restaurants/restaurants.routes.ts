@@ -1,4 +1,4 @@
-import { getRestaurants } from './restaurants.service';
+import { getRestaurants, insertRestaurant } from './restaurants.service';
 
 // routes
 export default [
@@ -6,5 +6,10 @@ export default [
     path: "/",
     method: "get",
     handler: getRestaurants
+  },
+  {
+    path: "/add",
+    method: "get",
+    handler: insertRestaurant
   }
 ];

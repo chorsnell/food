@@ -1,9 +1,21 @@
-export interface restaurant {
-	id: number,
-	name: string,
-	town: string,
-	postCode: string,
-	cuisine: string
+import {Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn} from "typeorm";
+
+@Entity()
+export class Restaurant {
+	@PrimaryGeneratedColumn()
+	id: number;
+
+	@Column({ default: null })
+	name: string;
+
+	@Column({ default: null })
+	town: string;
+
+	@Column({ default: null })
+	postCode: string;
+
+	@Column({ default: null })
+	cuisine: string;
 }
 
-export interface restaurants extends Array<restaurant>{}
+export interface Restaurants extends Array<Restaurant>{}
