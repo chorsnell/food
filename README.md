@@ -13,7 +13,7 @@ npm run dev
 ```
 
 ## Open API Spec
-View latest master API spec - http://editor.swagger.io/?url=https://raw.githubusercontent.com/poppahorse/food/typeorm/open-api.yml
+View latest master API spec - http://editor.swagger.io/?url=https://raw.githubusercontent.com/poppahorse/food/master/open-api.yml
 
 ## TODO
 - Jest tests
