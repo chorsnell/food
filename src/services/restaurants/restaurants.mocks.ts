@@ -1,26 +1,29 @@
 import { Restaurant, Restaurants } from "./restaurant.interface";
+import { MockMenus } from "../menus/menus.mocks";
 
-/** sets defaults for install address mock */
+// default restaurant
 const getRestaurantDefault = () => ({
 	'id': 1,
 	'name': 'Godfathers',
 	'postCode': 'MK11 1AB',
 	'town': 'Milton Keynes',
-	'cuisine': 'Italian'
+	'cuisine': 'Italian',
+	'menu': MockMenus
 });
 
-/** installation address mock that allows overwriting of specific properties with partials */
-/** For posterity, nice article on this here - https://itnext.io/mocking-in-typescript-a97267f7cea9 */
+// mock that allows overwriting of specific properties with partials
+// For posterity, nice article on this here - https://itnext.io/mocking-in-typescript-a97267f7cea9
 export const getRestaurantMock = (a?: Partial<Restaurant>): Restaurant => ({
 	...getRestaurantDefault(),
 	...a
 });
 
-/** Exports the evaluation of getInstallAddressMock */
+// exports mock menu items
 export let MockRestaurants = [
 	getRestaurantMock(),
-	getRestaurantMock({name: 'Corleones'}),
-	getRestaurantMock({name: 'Don Michaels'}),
-	getRestaurantMock({name: 'Vitos Pizza'}),
-
+	getRestaurantMock({id: 2, name: 'Corleones'}),
+	getRestaurantMock({id: 3, name: 'Don Michaels'}),
+	getRestaurantMock({id: 4, name: 'Vitos Pizza'}),
+	getRestaurantMock({id: 6, name: 'Poppa Pizza'}),
+	getRestaurantMock({id: 7, name: 'Mad Pizza'}),
 ];

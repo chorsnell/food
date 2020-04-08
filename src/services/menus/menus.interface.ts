@@ -4,7 +4,7 @@ import { Restaurant } from "../restaurants/restaurant.interface";
 @Entity()
 export class Menu {
 	@PrimaryGeneratedColumn()
-	id: number;
+	id?: number;
 
 	@Column()
 	name: string;

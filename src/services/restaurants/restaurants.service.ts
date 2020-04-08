@@ -44,7 +44,7 @@ export const insertRestaurant = async (req: Request, res: Response): Promise<voi
     let menuRepository = getConnection().getRepository(Menu);
 	// create new 
 	let menu = new Menu();
-	menu.name = 'Pizza';
+	menu.name = 'Sample Pizza';
 	menu.type = 'main';
 	menu.price = 9.99;
 	await menuRepository.save(menu);
