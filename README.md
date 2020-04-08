@@ -1,6 +1,7 @@
 # Food simple typescript API
 
 ## Stack
+- docker + docker-compose
 - node 12
 - typescript
 - express
@@ -15,13 +16,23 @@
 docker-compose up -d
 ```
 
-## Manually
+#### If you want to seed some data
+```
+docker-compose run api npm run seed
+```
+
+### Manually
 
 Configure `ormconfig.json` to point at a postgres database with username + pw
 
-### Start the API
+#### Start the API
 ```npm i
 npm run dev
+```
+
+#### If you want to seed some data
+```
+npm run seed
 ```
 
 ## Open API Spec
