@@ -41,5 +41,7 @@ npm run seed
 ## Open API Spec
 View latest master API spec - http://editor.swagger.io/?url=https://raw.githubusercontent.com/chorsnell/food/master/open-api.yml
 
+When things are stood up locally on your machine, you should be able to go through and interrogate / modify the data from the above Swagger UI
+
 ## TODO
 - Jest tests
