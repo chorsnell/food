@@ -1,11 +1,23 @@
 # Food simple typescript API
 
+## Stack
+- node 12
+- typescript
+- express
+- open api / swagger
+- postgres
+- typeorm
+
 ## Setup
 
-### Start a postgres database
+### With docker
 ```
 docker-compose up -d
 ```
+
+## Manually
+
+Configure `ormconfig.json` to point at a postgres database with username + pw
 
 ### Start the API
 ```npm i
