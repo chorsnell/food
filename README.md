@@ -39,7 +39,7 @@ npm run seed
 ```
 
 ## Open API Spec
-View latest master API spec - http://editor.swagger.io/?url=https://raw.githubusercontent.com/poppahorse/food/master/open-api.yml
+View latest master API spec - http://editor.swagger.io/?url=https://raw.githubusercontent.com/chorsnell/food/master/open-api.yml
 
 ## TODO
 - Jest tests
