@@ -18,6 +18,9 @@
 	"migrations": [
 	  "src/migration/*.ts"
 	],
+	"seeds": [
+		"src/data/seeds/*.seed.ts"
+	],
 	"cli": {
 	  "entitiesDir": "src/entity",
 	  "migrationsDir": "src/migration",
