@@ -1,16 +1,26 @@
 # Use postgres/example user/password credentials
-version: '3'
+version: "3"
 services:
+  api:
+    image: node:12.16.1-buster
+    restart: always
+    ports:
+      - 3000:3000
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    command: "npm run dev"
   db:
     image: postgres
     restart: always
     environment:
-        POSTGRES_PASSWORD: "example"
+      POSTGRES_PASSWORD: "example"
     ports:
-        - 5432:5432
+      - 5432:5432
     expose:
-        - "5432"
+      - "5432"
     volumes:
-        - vol_postgres:/var/lib/mysql
+      - vol_postgres:/var/lib/mysql
 volumes:
   vol_postgres:

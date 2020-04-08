@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.ts",
+    "prestart": "npm i",
     "start": "ts-node dist/server.js",
     "build": "tsc -p ."
   },
