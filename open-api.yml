@@ -173,4 +173,4 @@ components:
           example: 9.99
 servers:
   - description: SwaggerHub API Auto Mocking
-    url: https://localhost:3000
+    url: http://localhost:3000
