@@ -15,6 +15,9 @@
 ```
 docker-compose up -d
 ```
+This might take a while, as its standing up the db, then the api service, then running `npm i` on prestart, so you can check whats going on with `docker-compose logs -f`. If the api service doesn't start right away, just wait longer (like a min?)
+
+<img src="https://y.yarn.co/879507d3-0112-45c8-abcc-e0d0c5be64af_text_hi.gif" width="300" />
 
 #### If you want to seed some data
 ```
